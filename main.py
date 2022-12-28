@@ -26,6 +26,8 @@ def Calcul():
     if jour < 0:
         if aujourdhui[1] in mois_31: jourPlus = 1
         else: jourPlus = 0
+        if aujourdhui[1] > 2: jourPlus -= 2
+        jourPlus += int(aujourdhui[1]-ANNEE/4)
         jour = (30 + jourPlus) - abs(jour)
         MOIS += 1
 
